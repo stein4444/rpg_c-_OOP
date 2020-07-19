@@ -93,7 +93,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>E:\dev\SFML-2.5.1\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>E:\hm\OOP course work\TinyXML;E:\dev\SFML-2.5.1\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>sfml-graphics-d.lib;sfml-window-d.lib;sfml-audio-d.lib;sfml-system-d.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
@@ -142,20 +142,33 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Bitmask.cpp" />
     <ClCompile Include="Enemy.cpp" />
     <ClCompile Include="FatherHero.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="Hero.cpp" />
+    <ClCompile Include="level.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Menu.cpp" />
+    <ClCompile Include="Move.cpp" />
+    <ClCompile Include="Window.cpp" />
+    <ClCompile Include="WorkingDirectory.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Bitmask.h" />
     <ClInclude Include="Enemy.h" />
     <ClInclude Include="FatherHero.h" />
     <ClInclude Include="Friend.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="Hero.h" />
+    <ClInclude Include="Level.h" />
     <ClInclude Include="Menu.h" />
+    <ClInclude Include="Move.h" />
+    <ClInclude Include="Window.h" />
+    <ClInclude Include="WorkingDirectory.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="images\viking.png" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

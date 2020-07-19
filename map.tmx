@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.4" tiledversion="1.4.1" orientation="orthogonal" renderorder="right-down" width="40" height="40" tilewidth="32" tileheight="32" infinite="0" nextlayerid="5" nextobjectid="48">
+ <tileset firstgid="1" source="../../../dev/tiles/basic.tsx"/>
+ <tileset firstgid="1025" source="../../../dev/tiles/terrain_atlas.tsx"/>
+ <tileset firstgid="2049" source="../../../dev/tiles/rqgefh.tsx"/>
+ <tileset firstgid="2109" source="../../../dev/tiles/etheh.tsx"/>
+ <tileset firstgid="3453" source="../../../dev/tiles/trree.tsx"/>
+ <tileset firstgid="3709" source="../../../dev/tiles/coin.tsx"/>
+ <layer id="1" name="Tile Layer 1" width="40" height="40">
+  <data encoding="base64" compression="zlib">
+   eJzNlltugzAQRQEprndUqevqJujjI8tISBcS0i6EPvbQiZQRt8MY/KR8HKEkChyux+PZN1W13ziPVTp3NozWVNUT8Uy8mOnnV5PXDz1rolGu19+O9NxO8TmY8bcT8VbIjx2tnV6PZqQTfmeiJy7EO/FR0K9WsrvS3xw0v4H4JL6Ib+KncH4yO2vHfNgPa21NP84PacAPM/wPP22/Yn6t8GtX9nvY6bBfZ/7u48PG/LgG2fG8gfVlZA2y42Cm/aeEn7Y35D4Zbj69cOqBS8HzYw6r5Cm9+D1y+2EvjgXPx1x+Mp8U8B3Zb6leYmstFDwPLfhpdYL/4f6A34XOUz5Y8dy5/PBd2A/dG3HP2HrTZjG+ryu/OT/00WaAULRZTOYnnxvql1prrqv0c3n65BdTa3Pvm9Mvpd9pa5zbL7XfudY9xS8XuCdz5Vei72m9KtYv9Yz1JdZvLVx+srfj+Ybf+84j93UcLj/r4Sf3nCuDWDfNT/Y0lx+eQVpeWPc5/LSz2eW31PtyeC2t71z9+fSy3H7y3q78fHtZDjeZn5ah9POlhB+u0Rb95BrJeSxkrltjfeWcEnKWlvDDfYHEzMUl/bR+FjOLpJxr0m/L/AIQsptG
+  </data>
+ </layer>
+ <layer id="2" name="Tile Layer 2" width="40" height="40">
+  <data encoding="base64" compression="zlib">
+   eJzdl7lTFEEUxnvBRVmoTTAUFNDQWzNBAQ2870AFFNDA+w48EvUf0FANPUMN1VBBQy1N1FBBcw3V8rdVM2Xzqrvn9TLoll/Vr3aOhf7me/26Z435/7S+bMwG2Aibyn9nzFbGaYO5MA/aoQM6YT4ssHzs4Xgv7IP+HPxdLxpzoxj+zkLGWQSLYQkshWWwHFbASsvHYY6PwFE4FvA32mjMWGO2p0d8Pi6GvXYxTjeshjXQA73QB2thneXjAscX4RJcDvgbx9uEx5/t6TWfbxxebW1mnC2wFbbBdtgBO2EX7FbW8S1+3iWeiiVjGkp/7tnZ2J5s+a4PMP4g7IcDMATDMAIH4ZDS3ze8fVdkFqvjjH8CTsIpOA1n4Cycg/PQkhBSC3nNLrnvyWzkXNP0iXfcclyPayTznEq+FX8xPa6RzNM39yrSrLkxPZ63NGtuXj1ejTRrbkyPh9bmaqRZczU9niq0NteC5No8Fd1pMuYu3GuafN3eC1Ll/e5SgDqoD3znOb5ewKjw59oLYt9dbmLgFtwuuO+3Qwd0Bv7HJ3x9hnHhz7UXhPrI1RNP8PUUnnn89UAv9CXn9/HwAB5aXuqbjZkBxebAQyQK9ZGrJ97j6wN8LLifYQiGYSQ5H8PXS3glskqVVY9Urnmj6Qn5DFfgKlxLzifw9QW+evxl1SOVZt64lPUMDdRwJszy1FLWwyc5b7JyD/WptmYxkvMmK/dQ3tqaxexJct5k5S7ztqWt2XTuSTLvapTHnuSrgcz7X2m6alBtD8m+zKrBD/7gJ/yKHEfbQ1Kx6+AcHqYV2uomX8/yre0hqVBfurQKX13QLfz5fNvSvOtI2X3peh+ryM6mnwEGYFD48Pm2Vc2eZfel77e5KxtZT59vW7G1kvL9Nndlo/Eslcca6pIrG61nW9o1NHaeunKxPafXNXOwojzeyW35cpHXNXOwoth38iz5ctHmJZW1FsbOU18u2rxiVSt7fS3oN2TC5Ug=
+  </data>
+ </layer>
+ <objectgroup id="3" name="collition">
+  <object id="16" name="house" x="80" y="72" width="277.333" height="168"/>
+  <object id="17" name="house" x="368" y="258.667" width="277.333" height="168"/>
+  <object id="18" name="friend1" x="171" y="268" width="61" height="76"/>
+  <object id="19" name="friend1" x="553.5" y="90" width="61" height="76"/>
+  <object id="33" name="klubnika" gid="5232" x="1128" y="737" width="32" height="32"/>
+  <object id="38" name="klubnika" gid="5232" x="816" y="571" width="32" height="32"/>
+  <object id="39" name="klubnika" gid="5232" x="618" y="740" width="32" height="32"/>
+  <object id="40" name="klubnika" gid="5232" x="102" y="928" width="32" height="32"/>
+  <object id="41" name="klubnika" gid="5232" x="184" y="674" width="32" height="32"/>
+  <object id="42" name="solid1" x="0" y="1244" width="1282" height="36"/>
+  <object id="43" x="896" y="1762"/>
+  <object id="45" name="solid1" x="3" y="-4" width="1282" height="36"/>
+  <object id="46" name="solid2" x="0" y="32" width="32" height="1216"/>
+  <object id="47" name="solid2" x="1248" y="24" width="32" height="1216"/>
+ </objectgroup>
+</map>

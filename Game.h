@@ -1,27 +1,29 @@
 #pragma once
 #include<SFML/Graphics.hpp>
-//#include"Menu.h"
-using namespace sf;
+#include"Window.h"
+#include "WorkingDirectory.h"
+#include"Move.h"
+#ifndef GAME_H
+#define GAME_H
+
 class Game
 {
-private:
-	//Variables
-	//Menu& menu;
 public:
-	RenderWindow* window;
-	Event sfEvent;
-
-	Clock dtClock;
-	float dt;
-	//initialize
-	void initWindow();
-	// constructors destructors
-	Game();
-	virtual ~Game();
-	//functions
-	void updateDt();
-	void updateSFMLEvents();
-	void update();
-	void redner();
-	void run();
+    Game();
+    void Update();
+    void LateUpdate();
+    void Draw();
+    bool IsRunning() const;
+    void CalculateDeltaTime();
+    void CaptureMove();
+private:
+    Window window;
+    sf::Texture vikingTexture;
+    sf::Sprite vikingSprite;
+    WorkingDirectory workingDir;
+    sf::Clock clock;
+    float deltaTime;
+    Move move;
 };
+
+#endif /* Game_hpp */

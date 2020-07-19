@@ -1,79 +1,73 @@
 #include "Game.h"
 
-
-//Static functions
-
-//Initialize functions
-
-
-void Game::initWindow()
+Game::Game():window("C++ RPG")
 {
-	//Creates a  SFML window  using options from a window.ini file 
+	vikingTexture.loadFromFile("viking.png"); // 1   	
+		vikingSprite.setTexture(vikingTexture);
+		deltaTime = clock.restart().asSeconds();
+}
 
+void Game::Update()
+{ 
+    window.Update();
 
-	std::string title = "RPG";
-	sf::VideoMode window_bonus(800, 600);
-	unsigned framerate_limit = 120;
-	bool vertical_sync_enable = false;
+    const sf::Vector2f& spritePos = vikingSprite.getPosition();
+    const int moveSpeed = 100;
 
+    int xMove = 0;
+    if (move.IsKeyPressed(Move::Key::Left)) // 1
+    {
+        xMove = -moveSpeed; // 2
+    }
+    else if (move.IsKeyPressed(Move::Key::Right))
+    {
+        xMove = moveSpeed;
+    }
 
-	this->window = new sf::RenderWindow(window_bonus, title);
-	this->window->setFramerateLimit(framerate_limit);
-	this->window->setVerticalSyncEnabled(vertical_sync_enable);
+    int yMove = 0;
+    if (move.IsKeyPressed(Move::Key::Up))
+    {
+        yMove = -moveSpeed;
+    }
+    else if (move.IsKeyPressed(Move::Key::Down))
+    {
+        yMove = moveSpeed;
+    }
+
+    float xFrameMove = xMove * deltaTime; // 2
+    float yFrameMove = yMove * deltaTime;
+
+    vikingSprite.setPosition(spritePos.x + xFrameMove, spritePos.y + yFrameMove);
 
 }
 
-//constructor destructor
-Game::Game()
-{
-	this->initWindow();
-}
-
-Game::~Game()
+void Game::LateUpdate()
 {
 
 }
 
-
-void Game::updateDt()
+void Game::Draw() 
 {
-	//Updates the dt variable with the time it takes to update and render one frame
-	this->dtClock.restart().asSeconds();
+	window.BeginDraw();
 
+	window.Draw(vikingSprite); // Draw the sprite.
 
+	window.EndDraw();
 }
 
-//fucntions
-void Game::updateSFMLEvents()
+bool Game::IsRunning() const
 {
-	while (this->window->pollEvent(this->sfEvent))
-	{
-		if (this->sfEvent.type == sf::Event::Closed)
-			this->window->close();
-	}
-
+	// We’ll return true here for now but this will be 
+	// changed shortly as we need a method of closing the window.
+	return window.IsOpen();
 }
 
-void Game::update()
+void Game::CalculateDeltaTime()
 {
-	this->updateSFMLEvents();
+	deltaTime = clock.restart().asSeconds();
 }
 
-void Game::redner()
+void Game::CaptureMove()
 {
-	this->window->clear();
-	//Render items
-	this->window->display();
-}
-
-void Game::run()
-{
-
-
-	while (this->window->isOpen())
-	{
-		this->updateDt();
-		this->update();
-		this->redner();
-	}
+	move.Update();
 }

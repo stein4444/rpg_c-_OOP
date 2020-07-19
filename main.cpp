@@ -1,11 +1,17 @@
 #include"Game.h"
-#include"Menu.h"
+#include<iostream>
 int main()
 {
 
-	Game game;
-	game.run();
-	Menu menu;
-	//menu.draw();
+    Game game;
+
+	while (game.IsRunning())
+	{
+		game.CaptureMove(); // We want to capture input at the start of a frame.
+		game.Update();
+		game.LateUpdate();
+		game.Draw();
+		game.CalculateDeltaTime();
+	}
 	return 0;
 }
